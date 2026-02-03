@@ -1,329 +1,187 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pineal Guardian</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background: #ffffff;
-      color: #1d1d1f;
-    }
-
-    /* TOP BAR */
-    .top-bar {
-      background: linear-gradient(90deg, #003f9e, #007bff);
-      color: #fff;
-      padding: 16px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .top-bar h1 {
-      font-size: 30px;
-      font-weight: 900;
-    }
-
-    .top-bar a {
-      color: #fff;
-      text-decoration: none;
-      margin-right: 18px;
-      font-weight: bold;
-    }
-
-    .top-cta {
-      background: linear-gradient(180deg, #2ecc71, #1fa84f);
-      padding: 14px 32px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 90px 20px;
-      background: linear-gradient(180deg, #ffffff, #eef5ff);
-    }
-
-    .hero-container {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .product-visual {
-      flex: 1;
-      text-align: center;
-    }
-
-    .product-main {
-      max-width: 520px;
-      width: 100%;
-      margin-bottom: 26px;
-      filter: drop-shadow(0 22px 45px rgba(0,0,0,0.3));
-    }
-
-    .logos-box {
-      max-width: 380px;
-      margin: 0 auto 26px;
-    }
-
-    .logos-box img {
-      width: 100%;
-    }
-
-    .bundle-box img {
-      max-width: 420px;
-      width: 100%;
-    }
-
-    .hero-content {
-      flex: 1;
-    }
-
-    .hero-content h2 {
-      font-size: 50px;
-      font-weight: 900;
-      line-height: 1.2;
-      background: linear-gradient(90deg, #004aad, #1fa84f);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
-    }
-
-    .price {
-      font-size: 22px;
-      margin-bottom: 18px;
-    }
-
-    .price del {
-      color: #999;
-      margin-right: 10px;
-    }
-
-    .price strong {
-      color: #1fa84f;
-      font-size: 26px;
-    }
-
-    .description {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 26px;
-      color: #444;
-    }
-
-    .benefits li {
-      margin-bottom: 12px;
-      font-size: 17px;
-    }
-
-    .cta-center {
-      margin-top: 30px;
-    }
-
-    .cta-button {
-      background: linear-gradient(180deg, #2ecc71, #1fa84f);
-      color: #fff;
-      padding: 20px 60px;
-      font-size: 22px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-    }
-
-    /* INFO SECTIONS */
-    .section {
-      padding: 90px 20px;
-    }
-
-    .section h3 {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 40px;
-      color: #004aad;
-    }
-
-    .info-text {
-      max-width: 900px;
-      margin: auto;
-      font-size: 18px;
-      line-height: 1.8;
-      color: #333;
-    }
-
-    /* COMMENTS */
-    .comments {
-      background: #f4f8ff;
-    }
-
-    .comment-grid {
-      max-width: 1000px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .comment-row {
-      display: flex;
-      gap: 22px;
-      background: #fff;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.12);
-    }
-
-    .comment-row img {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .comment-row strong {
-      display: block;
-      margin-bottom: 8px;
-      color: #004aad;
-    }
-
-    .footer {
-      background: #003f9e;
-      color: #fff;
-      text-align: center;
-      padding: 50px 20px;
-      font-size: 14px;
-    }
-
-    @media(max-width: 900px) {
-      .hero-container {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pineal Guardian | Unlock Your Peak Cognitive Potential</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(90deg, #004aad, #1fa84f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at top right, #eef5ff 0%, #ffffff 50%);
+        }
+        .cta-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(31, 168, 79, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(31, 168, 79, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(31, 168, 79, 0); }
+        }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-900">
 
-<body>
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-blue-800 tracking-tight">PINEAL<span class="text-green-600">GUARDIAN</span></h1>
+            <div class="hidden md:flex gap-8 font-semibold text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition">How it Works</a>
+                <a href="#benefits" class="hover:text-blue-600 transition">Benefits</a>
+                <a href="#reviews" class="hover:text-blue-600 transition">Reviews</a>
+            </div>
+            <a href="https://pinealguardianvip.com/ds/indexts.php#aff=ErikMoraes" class="bg-green-600 text-white px-6 py-2 rounded-full font-bold hover:bg-green-700 transition shadow-lg">ORDER NOW</a>
+        </div>
+    </nav>
 
-<div class="top-bar">
-  <h1>Pineal Guardian</h1>
-  <div>
-    <a href="#about">About</a>
-    <a class="top-cta" href="https://pinealguardianvip.com/ds/indexts.php#aff=ErikMoraes">Order Now</a>
-  </div>
-</div>
+    <section class="hero-bg pt-16 pb-24 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+            
+            <div class="flex-1 order-2 lg:order-1 text-center">
+                <img src="Pineal-Guardian-X.webp" alt="Pineal Guardian Bottle" class="max-w-full h-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] mx-auto mb-8 transform hover:scale-105 transition duration-500">
+                <div class="bg-white p-4 rounded-2xl shadow-xl inline-block">
+                    <img src="logos.webp" alt="Certifications" class="h-12 w-auto">
+                </div>
+            </div>
 
-<section class="hero">
-  <div class="hero-container">
+            <div class="flex-1 order-1 lg:order-2">
+                <div class="inline-block bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold mb-6">
+                    ✨ #1 BRAIN HEALTH FORMULA 2026
+                </div>
+                <h2 class="text-4xl lg:text-6xl font-extrabold leading-tight mb-6">
+                    Decalcify Your <span class="gradient-text">Pineal Gland</span> & Restore Your Focus
+                </h2>
+                <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                    Most people ignore the "Third Eye." Pineal Guardian is the only formula designed to clear toxins, support deep REM sleep, and unlock mental clarity you haven't felt in years.
+                </p>
 
-    <div class="product-visual">
-      <img src="3-bottles.webp" class="product-main">
-      <div class="logos-box">
-        <img src="logos.webp">
-      </div>
-      <div class="bundle-box">
-        <img src="3-bottles.webp">
-      </div>
-    </div>
+                <div class="flex items-center gap-4 mb-10">
+                    <span class="text-4xl font-extrabold text-green-600">$39<span class="text-lg font-medium text-slate-400">/per bottle</span></span>
+                    <span class="bg-yellow-400 px-3 py-1 rounded font-bold text-sm">SAVE 60% TODAY</span>
+                </div>
 
-    <div class="hero-content">
-      <h2>Advanced Support for Pineal Gland Health & Mental Clarity</h2>
+                <ul class="space-y-4 mb-10">
+                    <li class="flex items-center gap-3 font-medium text-slate-700 text-lg">
+                        <div class="bg-green-100 p-1 rounded-full text-green-600">✔</div> 
+                        Deep, Restorative Sleep Cycles
+                    </li>
+                    <li class="flex items-center gap-3 font-medium text-slate-700 text-lg">
+                        <div class="bg-green-100 p-1 rounded-full text-green-600">✔</div> 
+                        Sharper Memory & Cognitive Speed
+                    </li>
+                    <li class="flex items-center gap-3 font-medium text-slate-700 text-lg">
+                        <div class="bg-green-100 p-1 rounded-full text-green-600">✔</div> 
+                        Natural Pineal Decalcification
+                    </li>
+                </ul>
 
-      <div class="price">
-        <del>$99</del> <strong>$39 per bottle</strong>
-      </div>
+                <a href="https://pinealguardianvip.com/ds/indexts.php#aff=ErikMoraes" class="cta-pulse block text-center bg-gradient-to-r from-green-500 to-green-700 text-white text-2xl font-extrabold py-6 rounded-2xl shadow-2xl hover:brightness-110 transition">
+                    CLAIM YOUR DISCOUNT NOW
+                    <span class="block text-sm font-normal mt-1 text-green-100">*Limited Stock Available</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-      <p class="description">
-        Pineal Guardian is a carefully formulated dietary supplement designed to support
-        the health of the pineal gland, helping regulate sleep cycles, improve mental clarity,
-        and support overall cognitive balance using natural ingredients.
-      </p>
+    <section id="about" class="py-24 bg-white px-6 border-y border-slate-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-3xl md:text-5xl font-extrabold mb-10 text-slate-900 leading-tight">Why the Pineal Gland Matters?</h3>
+            <div class="text-lg text-slate-600 leading-loose space-y-6 text-justify">
+                <p>
+                    Hidden deep in the brain, the pineal gland is responsible for your <strong>circadian rhythm</strong> and the production of essential neurotransmitters. Over time, fluoride and environmental toxins cause "calcification," which leads to brain fog, fatigue, and poor sleep.
+                </p>
+                <p>
+                    <strong>Pineal Guardian</strong> works by providing specific antioxidants and minerals that target these deposits. It’s not just a supplement; it’s a shield for your neurological health, helping you reconnect with your body’s natural rhythm.
+                </p>
+            </div>
+        </div>
+    </section>
 
-      <ul class="benefits">
-        <li>Supports deep and restorative sleep</li>
-        <li>Helps maintain healthy melatonin levels</li>
-        <li>Promotes focus, clarity, and memory</li>
-        <li>Supports long-term brain health</li>
-      </ul>
+    <section id="reviews" class="py-24 bg-slate-50 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-center text-4xl font-extrabold mb-16">Thousands of Renewed Lives</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-slate-600 italic mb-6">"I haven't slept this well since my 20s. My dreams are vivid and I wake up before the alarm."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-bold text-sm">Sarah J.</p>
+                            <p class="text-xs text-slate-400 italic">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="cta-center">
-        <a class="cta-button" href="https://pinealguardianvip.com/ds/indexts.php#aff=ErikMoraes">
-          Go To Official Website
-        </a>
-      </div>
-    </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-slate-600 italic mb-6">"My mental fog is gone. I'm much more productive at work and my memory is sharp."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://randomuser.me/api/portraits/men/36.jpg" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-bold text-sm">Michael R.</p>
+                            <p class="text-xs text-slate-400 italic">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
 
-  </div>
-</section>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-slate-600 italic mb-6">"Finally, a product that actually helps with deep sleep without the morning grogginess."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-bold text-sm">Emily C.</p>
+                            <p class="text-xs text-slate-400 italic">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
 
-<section class="section" id="about">
-  <h3>What Is Pineal Guardian?</h3>
-  <div class="info-text">
-    Pineal Guardian is a premium brain-support supplement created to help protect and nourish
-    the pineal gland — a small but vital gland responsible for regulating sleep cycles,
-    circadian rhythm, and overall cognitive balance. Modern lifestyle factors such as stress,
-    poor sleep, and environmental toxins may interfere with optimal pineal gland function.
-    Pineal Guardian was developed to provide targeted nutritional support to help restore
-    balance naturally.
-  </div>
-</section>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-slate-600 italic mb-6">"High quality ingredients. I feel more balanced and calm throughout the day."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-bold text-sm">Daniel B.</p>
+                            <p class="text-xs text-slate-400 italic">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="section comments">
-  <h3>Real Customer Reviews</h3>
+    <section class="py-24 px-6 bg-blue-900 text-white text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold mb-6">60-Day Money Back Guarantee</h2>
+            <p class="text-blue-200 text-lg mb-10">
+                Your investment is 100% protected. If you don't feel the difference in your mental clarity and sleep, we will refund every penny. No questions asked.
+            </p>
+            <a href="https://pinealguardianvip.com/ds/indexts.php#aff=ErikMoraes" class="inline-block bg-yellow-400 text-blue-900 text-2xl font-black px-12 py-5 rounded-2xl hover:bg-yellow-300 transition shadow-2xl">
+                ORDER PINEAL GUARDIAN NOW
+            </a>
+        </div>
+    </section>
 
-  <div class="comment-grid">
-
-    <div class="comment-row">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg">
-      <div>
-        <strong>Sarah Johnson – Austin, TX ⭐⭐⭐⭐⭐</strong>
-        I sleep deeper and wake up clear-headed. This has been a game changer for my routine.
-      </div>
-    </div>
-
-    <div class="comment-row">
-      <img src="https://randomuser.me/api/portraits/men/36.jpg">
-      <div>
-        <strong>Michael Reed – San Diego, CA ⭐⭐⭐⭐⭐</strong>
-        My focus at work improved significantly after a few weeks of use.
-      </div>
-    </div>
-
-    <div class="comment-row">
-      <img src="https://randomuser.me/api/portraits/women/68.jpg">
-      <div>
-        <strong>Emily Carter – Tampa, FL ⭐⭐⭐⭐⭐</strong>
-        I finally feel rested in the morning without feeling groggy.
-      </div>
-    </div>
-
-    <div class="comment-row">
-      <img src="https://randomuser.me/api/portraits/men/75.jpg">
-      <div>
-        <strong>Daniel Brooks – Denver, CO ⭐⭐⭐⭐⭐</strong>
-        Mental clarity and memory definitely improved for me.
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<div class="footer">
-These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease.<br><br>
-© 2026 Pineal Guardian. All rights reserved.
-</div>
+    <footer class="bg-slate-900 text-slate-500 py-12 px-6 text-center text-sm leading-relaxed">
+        <div class="max-w-4xl mx-auto">
+            <p class="mb-6">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease.</p>
+            <p>© 2026 Pineal Guardian. All rights reserved.</p>
+            <div class="mt-4 flex justify-center gap-6">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Terms of Service</a>
+                <a href="#" class="hover:underline">Contact Us</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
