@@ -1,225 +1,180 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Pineal Guardian X – Official Presentation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pineal Guardian</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-  background:#ffffff;
-  color:#1d1d1f;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f8fc;
+  color: #1a1a1a;
 }
 
 /* HEADER */
-.header{
-  background:linear-gradient(90deg,#003f9e,#007bff);
-  padding:18px 30px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+.header {
+  background: linear-gradient(90deg, #0a3cff, #1cc6a3);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header-left{
-  font-size:26px;
-  font-weight:900;
-  color:#fff;
+.header h1 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 900;
+  margin: 0;
 }
 
-.header-center a{
-  color:#e0ecff;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:16px;
+.header .nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.header-right a{
-  background:linear-gradient(180deg,#2ecc71,#1fa84f);
-  color:#fff;
-  padding:14px 34px;
-  border-radius:6px;
-  font-weight:bold;
-  text-decoration:none;
+.header .nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.header .cta-btn {
+  background: #ffd700;
+  color: #000;
+  padding: 14px 26px;
+  border-radius: 30px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 /* HERO */
-.hero{
-  padding:90px 20px;
-  background:linear-gradient(180deg,#ffffff,#eef5ff);
+.hero {
+  text-align: center;
+  padding: 60px 20px;
 }
 
-.hero-container{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  gap:90px;
-  align-items:center;
+.hero img {
+  max-width: 420px;
+  width: 100%;
 }
 
-/* PRODUCT */
-.product-visual{
-  flex:1;
-  text-align:center;
+/* LOGOS */
+.logos {
+  margin-top: 25px;
 }
 
-.product-main{
-  max-width:520px;
-  width:100%;
-  margin-bottom:26px;
-  filter:drop-shadow(0 20px 40px rgba(0,0,0,.25));
+.logos img {
+  max-width: 300px;
+  width: 100%;
 }
 
-.logos-box{
-  max-width:380px;
-  margin:auto;
-  padding:18px;
-  border-radius:14px;
-  background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.12);
+/* THREE BOTTLES */
+.three-bottles {
+  margin-top: 40px;
 }
 
-.logos-box img{width:100%;}
-
-/* CONTENT */
-.hero-content{
-  flex:1;
+.three-bottles img {
+  max-width: 480px;
+  width: 100%;
 }
 
-.hero-content h1{
-  font-size:52px;
-  font-weight:900;
-  line-height:1.15;
-  background:linear-gradient(90deg,#004aad,#1fa84f);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-bottom:22px;
+/* SECTIONS */
+.section {
+  max-width: 1100px;
+  margin: 60px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 50px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
-.price{
-  font-size:22px;
-  margin-bottom:14px;
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #0a3cff;
 }
 
-.old-price{
-  color:#888;
-  text-decoration:line-through;
-  margin-right:10px;
+.section p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 18px;
 }
 
-.new-price{
-  color:#1fa84f;
-  font-weight:bold;
-  font-size:26px;
+/* BENEFITS */
+.benefits ul {
+  font-size: 18px;
+  line-height: 1.8;
 }
 
-.description{
-  font-size:18px;
-  line-height:1.75;
-  color:#444;
-  margin-bottom:32px;
+.benefits li {
+  margin-bottom: 12px;
 }
 
-.cta-center{text-align:center;}
-
-.cta-button{
-  background:linear-gradient(180deg,#2ecc71,#1fa84f);
-  color:#fff;
-  padding:20px 70px;
-  font-size:22px;
-  font-weight:bold;
-  border-radius:8px;
-  text-decoration:none;
-  display:inline-block;
-  box-shadow:0 12px 28px rgba(0,0,0,.25);
+/* PRICE */
+.price-box {
+  text-align: center;
 }
 
-/* SECTION */
-.section{
-  padding:90px 20px;
+.old-price {
+  font-size: 26px;
+  color: #999;
+  text-decoration: line-through;
 }
 
-.section h2{
-  text-align:center;
-  font-size:40px;
-  font-weight:900;
-  color:#004aad;
-  margin-bottom:50px;
-}
-
-.box-grid{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:34px;
-}
-
-.box{
-  background:#fff;
-  padding:36px;
-  border-radius:18px;
-  box-shadow:0 14px 34px rgba(0,0,0,.12);
-}
-
-.box h3{
-  color:#1fa84f;
-  margin-bottom:16px;
+.new-price {
+  font-size: 42px;
+  font-weight: 900;
+  color: #1cc6a3;
+  margin: 15px 0;
 }
 
 /* COMMENTS */
-.comments{
-  background:linear-gradient(180deg,#eef5ff,#ffffff);
+.comments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 25px;
 }
 
-.comment-list{
-  max-width:900px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
-  gap:34px;
+.comment {
+  background: #f9fbff;
+  padding: 25px;
+  border-radius: 14px;
 }
 
-.comment{
-  background:#fff;
-  padding:34px;
-  border-radius:18px;
-  display:flex;
-  gap:22px;
-  box-shadow:0 14px 34px rgba(0,0,0,.12);
+.comment img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
-.comment img{
-  width:72px;
-  height:72px;
-  border-radius:50%;
-  object-fit:cover;
+.comment strong {
+  display: block;
+  margin-top: 10px;
 }
 
-.comment-name{
-  font-weight:bold;
-  color:#004aad;
+.comment span {
+  font-size: 14px;
+  color: #555;
 }
 
-.comment-stars{color:#f5b50a;margin:6px 0 12px;}
-
-/* FOOTER */
-.footer{
-  background:linear-gradient(90deg,#003f9e,#007bff);
-  color:#fff;
-  text-align:center;
-  padding:50px 20px;
-  font-size:14px;
+/* CTA FINAL */
+.final-cta {
+  text-align: center;
+  margin: 60px 0;
 }
 
-@media(max-width:900px){
-  .hero-container{flex-direction:column;text-align:center;}
+.final-cta a {
+  background: linear-gradient(90deg, #0a3cff, #1cc6a3);
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 22px;
+  font-weight: 800;
+  border-radius: 40px;
+  text-decoration: none;
 }
 </style>
 </head>
@@ -227,137 +182,104 @@ body{
 <body>
 
 <div class="header">
-  <div class="header-left">Pineal Guardian</div>
-  <div class="header-center"><a href="#about">About</a></div>
-  <div class="header-right">
-    <a href="#cta">Buy Now</a>
+  <h1>Pineal Guardian X</h1>
+  <div class="nav">
+    <a href="#about">About</a>
+    <a class="cta-btn" href="#price">Order Now</a>
   </div>
 </div>
 
-<section class="hero">
-<div class="hero-container">
+<div class="hero">
+  <!-- IMAGEM PRINCIPAL -->
+  <img src="3-bottles.webp" alt="Pineal Guardian X">
 
-<div class="product-visual">
-  <img src="3-bottles.webp" class="product-main">
-  <div class="logos-box">
-    <img src="logos.webp">
+  <!-- LOGOS -->
+  <div class="logos">
+    <img src="logos.webp" alt="Trusted Logos">
+  </div>
+  
+</div>
+
+<div id="about" class="section">
+  <h2>What is Pineal Guardian?</h2>
+  <p>
+  Pineal Guardian X is a premium dietary supplement developed to support the pineal gland, a small but essential gland responsible for regulating sleep cycles, mental clarity, and neurological balance.
+  </p>
+  <p>
+  Unlike generic supplements, Pineal Guardian X was formulated using plant-based ingredients carefully selected for their traditional use and scientific relevance in cognitive and neurological health.
+  </p>
+</div>
+
+<div class="section">
+  <h2>What is Pineal Guardian Used For?</h2>
+  <p>
+  Pineal Guardian X is designed for individuals seeking better sleep quality, improved mental focus, reduced mental fatigue, and overall brain health support.
+  </p>
+  <p>
+  Many users report feeling more mentally sharp, experiencing deeper rest at night, and having better daily energy levels after consistent use.
+  </p>
+</div>
+
+<div class="section benefits">
+  <h2>Main Benefits of Pineal Guardian X</h2>
+  <ul>
+    <li>Supports healthy pineal gland function</li>
+    <li>Promotes deeper, more restorative sleep</li>
+    <li>Helps improve focus and mental clarity</li>
+    <li>Supports brain detox and neurological balance</li>
+    <li>May assist in reducing mental fatigue and stress</li>
+  </ul>
+  <p>
+  Pineal Guardian X is intended to complement a healthy lifestyle and is manufactured following strict quality standards.
+  </p>
+</div>
+
+<div id="price" class="section price-box">
+  <p class="old-price">Regular Price: $99</p>
+  <p class="new-price">Today Only: $39 per bottle</p>
+  <a class="cta-btn" href="#">Get Pineal Guardian Now</a>
+</div>
+
+<div class="section">
+  <h2>Real Customer Reviews</h2>
+  <div class="comments">
+    <div class="comment">
+      <img src="male1.jpg">
+      <strong>Michael R.</strong>
+      <span>Dallas, TX</span>
+      <p>"After a few weeks, my sleep improved significantly and I feel more focused."</p>
+    </div>
+    <div class="comment">
+      <img src="female1.jpg">
+      <strong>Sarah L.</strong>
+      <span>San Diego, CA</span>
+      <p>"I feel more balanced and energized during the day. Very satisfied."</p>
+    </div>
+    <div class="comment">
+      <img src="male2.jpg">
+      <strong>David K.</strong>
+      <span>Tampa, FL</span>
+      <p>"Quality supplement, noticeable effects after consistent use."</p>
+    </div>
+    <div class="comment">
+      <img src="female2.jpg">
+      <strong>Emily W.</strong>
+      <span>Portland, OR</span>
+      <p>"Helps me relax and sleep better without feeling groggy."</p>
+    </div>
+    <div class="comment">
+      <img src="male3.jpg">
+      <strong>Robert M.</strong>
+      <span>Columbus, OH</span>
+      <p>"Simple to take and fits well into my routine."</p>
+    </div>
   </div>
 </div>
 
-<div class="hero-content">
-<h1>Advanced Support for Pineal Gland Health & Mental Clarity</h1>
-
-<div class="price">
-  <span class="old-price">$99</span>
-  <span class="new-price">$39 per bottle</span>
-</div>
-
-<p class="description">
-Pineal Guardian is a premium dietary supplement developed to support the pineal gland —
-a small but vital gland responsible for regulating sleep cycles, mental clarity, and hormonal balance.
-This advanced formula works naturally with your body to help restore balance, clarity, and deep restorative sleep.
-</p>
-
-<div class="cta-center" id="cta">
-<a href="https://pinealguardianvip.com/ds/indexts.php#aff=ErikMoraes" class="cta-button">
-Go To Official Website
-</a>
-</div>
-</div>
-
-</div>
-</section>
-
-<section class="section" id="about">
-<h2>What Is Pineal Guardian?</h2>
-
-<div class="box-grid">
-<div class="box">
-<h3>What Is Pineal Guardian</h3>
-<p>
-Pineal Guardian is a natural dietary supplement formulated to support the health and function
-of the pineal gland. This gland plays a crucial role in regulating melatonin production,
-sleep quality, circadian rhythm, and overall mental clarity.
-</p>
-</div>
-
-<div class="box">
-<h3>What Is Pineal Guardian Used For?</h3>
-<p>
-Pineal Guardian is designed for individuals seeking better sleep quality,
-clearer thinking, improved focus, and long-term brain support without harsh stimulants or chemicals.
-</p>
-</div>
-
-<div class="box">
-<h3>Benefits & Safety</h3>
-<p>
-Benefits include improved sleep cycles, enhanced focus, reduced mental fog,
-and balanced hormonal function. Pineal Guardian is made with natural ingredients
-and manufactured in facilities that follow strict quality standards.
-</p>
-</div>
-</div>
-</section>
-
-<section class="section comments">
-<h2>Verified Customer Reviews</h2>
-
-<div class="comment-list">
-
-<div class="comment">
-<img src="https://randomuser.me/api/portraits/women/65.jpg">
-<div>
-<div class="comment-name">Emily R. • Denver, Colorado</div>
-<div class="comment-stars">★★★★★</div>
-<p>I noticed improvements in my sleep within the first two weeks. I feel more focused and refreshed every morning.</p>
-</div>
-</div>
-
-<div class="comment">
-<img src="https://randomuser.me/api/portraits/men/45.jpg">
-<div>
-<div class="comment-name">Michael T. • Phoenix, Arizona</div>
-<div class="comment-stars">★★★★★</div>
-<p>This supplement helped me regain mental clarity and consistent sleep without feeling groggy.</p>
-</div>
-</div>
-
-<div class="comment">
-<img src="https://randomuser.me/api/portraits/women/32.jpg">
-<div>
-<div class="comment-name">Laura K. • Tampa, Florida</div>
-<div class="comment-stars">★★★★★</div>
-<p>I love how gradual and natural the effects feel. My focus during the day improved a lot.</p>
-</div>
-</div>
-
-<div class="comment">
-<img src="https://randomuser.me/api/portraits/men/61.jpg">
-<div>
-<div class="comment-name">James W. • Columbus, Ohio</div>
-<div class="comment-stars">★★★★★</div>
-<p>After a month of use, my sleep quality and energy levels are noticeably better.</p>
-</div>
-</div>
-
-<div class="comment">
-<img src="https://randomuser.me/api/portraits/women/44.jpg">
-<div>
-<div class="comment-name">Natalie S. • Irvine, California</div>
-<div class="comment-stars">★★★★★</div>
-<p>It feels like my mind is clearer and my sleep cycle finally stabilized.</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<div class="footer">
-These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.
-<br><br>
-© 2026 Pineal Guardian. All rights reserved.
+<div class="final-cta">
+  <a href="#">Order Pineal Guardian X Now</a>
 </div>
 
 </body>
 </html>
+
