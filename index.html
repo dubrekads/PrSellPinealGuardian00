@@ -7,10 +7,9 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-V7WFSYZM5R');
 </script>
-  
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pineal Guardian</title>
@@ -78,12 +77,6 @@ body {
   width: 100%;
 }
 
-.bundle-box img {
-  max-width: 360px;
-  width: 100%;
-  filter: drop-shadow(0 14px 30px rgba(0,0,0,0.2));
-}
-
 /* CONTENT */
 .hero-content {
   flex: 1;
@@ -109,7 +102,7 @@ body {
 .description {
   font-size: 18px;
   color: #444;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 28px;
 }
 
@@ -120,7 +113,7 @@ body {
 
 .benefits li {
   font-size: 18px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .benefits li::before {
@@ -185,23 +178,42 @@ body {
 }
 
 .comment-grid {
-  max-width: 1100px;
+  max-width: 900px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
 .comment-box {
   background: #ffffff;
-  padding: 26px;
-  border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
 }
 
-.comment-box strong {
-  display: block;
+.comment-avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-name {
+  font-weight: bold;
   color: #004aad;
+  margin-bottom: 4px;
+}
+
+.comment-stars {
+  color: #f5b50a;
   margin-bottom: 10px;
 }
 
@@ -219,6 +231,11 @@ body {
   .hero-container {
     flex-direction: column;
     text-align: center;
+  }
+
+  .comment-box {
+    flex-direction: column;
+    text-align: left;
   }
 }
 </style>
@@ -239,7 +256,6 @@ FREE SHIPPING • 4 FREE BONUSES • 365-DAY GUARANTEE
       <div class="logos-box">
         <img src="logos.webp" alt="Certifications">
       </div>
-
     </div>
 
     <div class="hero-content">
@@ -247,15 +263,16 @@ FREE SHIPPING • 4 FREE BONUSES • 365-DAY GUARANTEE
       <div class="price">Only $39 per bottle</div>
 
       <p class="description">
-        Pineal Guardian is a dietary supplement designed to support pineal gland
-        health, mental clarity, and natural sleep balance.
+        Pineal Guardian is a carefully formulated dietary supplement designed to support the health and function of the pineal gland.
+        By combining natural ingredients known for their role in brain health, sleep regulation, and cognitive balance,
+        Pineal Guardian helps your body restore its natural rhythm and mental clarity over time.
       </p>
 
       <ul class="benefits">
-        <li>Supports deep and restorative sleep</li>
-        <li>Promotes mental clarity and focus</li>
-        <li>Helps maintain healthy melatonin levels</li>
-        <li>Formulated with natural ingredients</li>
+        <li>Helps promote deeper, more restorative sleep cycles</li>
+        <li>Supports mental clarity, focus, and daily cognitive performance</li>
+        <li>Aids in maintaining healthy melatonin production naturally</li>
+        <li>Crafted with plant-based ingredients and manufactured in FDA-registered facilities</li>
       </ul>
 
       <div class="cta-center">
@@ -273,16 +290,28 @@ FREE SHIPPING • 4 FREE BONUSES • 365-DAY GUARANTEE
 
 <div class="info-grid">
   <div class="info-box">
-    <h3>Supports the Pineal Gland</h3>
-    <p>Helps nourish and protect the pineal gland for optimal performance.</p>
+    <h3>Supports Pineal Gland Health</h3>
+    <p>
+      The pineal gland plays a key role in regulating sleep, mood, and circadian rhythm.
+      Pineal Guardian provides targeted nutrients that help support and protect this vital gland
+      from daily stressors and environmental factors.
+    </p>
   </div>
+
   <div class="info-box">
-    <h3>Restores Natural Balance</h3>
-    <p>Supports healthy sleep cycles and circadian rhythm.</p>
+    <h3>Restores Natural Sleep Balance</h3>
+    <p>
+      By supporting healthy melatonin levels, Pineal Guardian helps the body re-establish a more
+      consistent sleep–wake cycle, allowing you to fall asleep faster and wake up feeling refreshed.
+    </p>
   </div>
+
   <div class="info-box">
-    <h3>Enhances Mental Clarity</h3>
-    <p>Promotes focus, memory, and mental sharpness.</p>
+    <h3>Enhances Cognitive Clarity</h3>
+    <p>
+      Users report improved focus, reduced mental fog, and better overall cognitive performance
+      as the body reaches a more balanced and rested state.
+    </p>
   </div>
 </div>
 </section>
@@ -291,18 +320,50 @@ FREE SHIPPING • 4 FREE BONUSES • 365-DAY GUARANTEE
 <h2>Real Customer Reviews</h2>
 
 <div class="comment-grid">
+
   <div class="comment-box">
-    <strong>⭐⭐⭐⭐⭐ Sarah M.</strong>
-    I started sleeping better within weeks and my mind feels clearer every day.
+    <div class="comment-avatar">
+      <img src="https://i.pravatar.cc/100?img=12" alt="Sarah M">
+    </div>
+    <div class="comment-content">
+      <div class="comment-name">Sarah M. • Austin, TX</div>
+      <div class="comment-stars">★★★★★</div>
+      <p>
+        I started noticing changes after about two weeks. My sleep became deeper,
+        and I wake up feeling more mentally clear instead of groggy. This has easily
+        become part of my nightly routine.
+      </p>
+    </div>
   </div>
+
   <div class="comment-box">
-    <strong>⭐⭐⭐⭐⭐ Daniel R.</strong>
-    My focus and energy improved a lot. Very satisfied with Pineal Guardian.
+    <div class="comment-avatar">
+      <img src="https://i.pravatar.cc/100?img=32" alt="Daniel R">
+    </div>
+    <div class="comment-content">
+      <div class="comment-name">Daniel R. • San Diego, CA</div>
+      <div class="comment-stars">★★★★★</div>
+      <p>
+        I was skeptical at first, but after consistent use I noticed better focus during the day
+        and a more stable energy level. I don’t feel mentally drained like before.
+      </p>
+    </div>
   </div>
+
   <div class="comment-box">
-    <strong>⭐⭐⭐⭐⭐ Linda K.</strong>
-    Great supplement. I wake up refreshed and mentally sharp.
+    <div class="comment-avatar">
+      <img src="https://i.pravatar.cc/100?img=45" alt="Linda K">
+    </div>
+    <div class="comment-content">
+      <div class="comment-name">Linda K. • Tampa, FL</div>
+      <div class="comment-stars">★★★★★</div>
+      <p>
+        What I like most is how natural it feels. No harsh side effects,
+        just gradual improvements in sleep quality and mental sharpness over time.
+      </p>
+    </div>
   </div>
+
 </div>
 </section>
 
